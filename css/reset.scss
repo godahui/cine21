@@ -1,13 +1,5 @@
 // npx sass --watch css/reset.scss css/reset.css
 
-#root {
-  width: 100vw;
-  height: 100vh;
-  background-color: #0b0b0b;
-
-  overflow: hidden;
-}
-
 * {
   scrollbar-color: #474747 #e0e0e0;
   scrollbar-width: thin;

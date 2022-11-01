@@ -1,0 +1,409 @@
+// npx sass --watch css/style.scss css/style.css
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  min-width: 320px;
+  background-color: #0b0b0b;
+
+  overflow: hidden auto;
+
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 auto;
+}
+
+// 헤더
+#header {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 0 auto;
+
+  width: 100%;
+  height: auto;
+
+  .top {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 0 60px;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    border-bottom: 1px solid #262626;
+    .inner {
+      display: flex;
+      flex-flow: row nowrap;
+      flex: 1 1 auto;
+      align-items: center;
+      justify-content: flex-end;
+
+      width: 1200px;
+      height: 100%;
+
+      > button {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        width: auto;
+        height: 40px;
+        padding: 0 15px;
+        transition: all 0.2s;
+
+        position: relative;
+        > p {
+          font-size: 14px;
+
+          position: relative;
+          z-index: 2;
+        }
+        > img {
+          position: relative;
+          z-index: 2;
+        }
+        &:not(:nth-of-type(1)) {
+          margin-left: 10px;
+        }
+        &::after {
+          display: block;
+          content: "";
+
+          background-color: #303030;
+          width: 0;
+          height: 0;
+          border-radius: 50%;
+
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          transition: all 0.4s;
+        }
+        &:hover {
+          background-color: #141414;
+        }
+        &:active {
+          &::after {
+            width: 150%;
+            height: 200%;
+          }
+        }
+        &.login-btn {
+          background-color: #ff3636;
+          &::after {
+            background-color: #ff3636;
+          }
+          &:hover {
+            background-color: #ff5e5e;
+          }
+          &:active {
+            &::after {
+              background-color: #d74242;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 0 75px;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    border-bottom: 1px solid #262626;
+
+    .inner {
+      display: flex;
+      flex-flow: row nowrap;
+      flex: 1 1 auto;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 1200px;
+      height: 100%;
+
+      > h1 {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 0 0 auto;
+        width: 135px;
+        height: auto;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      > nav {
+        display: flex;
+        flex-flow: column nowrap;
+        flex: 1 1 auto;
+
+        align-items: flex-end;
+        > ul {
+          display: flex;
+          flex-flow: row nowrap;
+          flex: 0 0 auto;
+          > li {
+            display: flex;
+            flex-flow: row nowrap;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: center;
+
+            width: auto;
+            height: 40px;
+            transition: background-color 0.2s;
+            overflow: hidden;
+
+            position: relative;
+
+            &:not(:nth-child(1)) {
+              margin-left: 10px;
+            }
+
+            &::after {
+              display: block;
+              content: "";
+
+              background-color: #303030;
+              width: 0;
+              height: 0;
+              border-radius: 50%;
+
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 1;
+              transition: all 0.4s;
+            }
+            &:hover {
+              background-color: #141414;
+            }
+            &:active {
+              &::after {
+                width: 150%;
+                height: 200%;
+              }
+            }
+
+            &.actived {
+              border: 1px solid #ff3636;
+              > a > p {
+                font-weight: 600;
+                color: #ff3636;
+              }
+            }
+
+            > a {
+              display: flex;
+              flex-flow: row nowrap;
+              flex: 1 1 auto;
+              align-items: center;
+              justify-content: center;
+
+              width: 100%;
+              height: 100%;
+              padding: 0 15px;
+              > p {
+                position: relative;
+                z-index: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-header {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 0 75px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #262626;
+    .inner {
+      display: flex;
+      flex-flow: row nowrap;
+      flex: 1 1 auto;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 100%;
+      height: 100%;
+      padding: 0 20px;
+
+      h1 {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 0 0 auto;
+      }
+
+      .right-menu {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 1 1 auto;
+
+        align-items: center;
+        justify-content: flex-end;
+        > button {
+          height: 50px;
+          padding: 10px;
+
+          position: relative;
+          overflow: hidden;
+          > img {
+            position: relative;
+            z-index: 2;
+          }
+          &:not(:nth-of-type(1)) {
+            margin-left: 10px;
+          }
+          &::after {
+            display: block;
+            content: "";
+
+            background-color: #303030;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            transition: all 0.4s;
+          }
+          &:hover {
+            background-color: #141414;
+          }
+          &:active {
+            &::after {
+              width: 150%;
+              height: 200%;
+            }
+          }
+        }
+        .menu-btn {
+          padding-right: 12px;
+          padding-left: 12px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  //   1240px 이상
+  @media screen and (min-width: 1240px) {
+    .mobile-header {
+      display: none;
+    }
+  }
+  // 1240px 이하
+  @media screen and (max-width: 1240px) {
+    .top,
+    .bottom {
+      display: none;
+    }
+  }
+  // 768px 이하
+  @media screen and (max-width: 768px) {
+  }
+  // 320px 이하
+  @media screen and (max-width: 480px) {
+  }
+}
+// 메인
+#main {
+  width: 100%;
+  height: 540px;
+
+  overflow: hidden;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../assets/main1.png");
+
+    position: relative;
+    p {
+      width: 100%;
+      max-width: 1200px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 44px;
+      word-break: keep-all;
+
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+  //   1240px 이상
+  @media screen and (min-width: 1240px) {
+  }
+  // 1240px 이하
+  @media screen and (max-width: 1240px) {
+    height: 480px;
+
+    > a > p {
+      max-width: none;
+      margin: 0 20px;
+      font-size: 30px;
+    }
+  }
+  // 768px 이하
+  @media screen and (max-width: 768px) {
+    height: 420px;
+
+    > a > p {
+      font-size: 24px;
+    }
+  }
+  // 320px 이하
+  @media screen and (max-width: 480px) {
+    height: 400px;
+
+    > a > p {
+      font-size: 20px;
+    }
+  }
+}
+
+// 본문
+#container {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  .inner {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 1200px;
+  }
+}
+
+// 푸터
+#footer {
+}
