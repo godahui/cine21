@@ -1,19 +1,19 @@
 // npx sass --watch css/reset.scss css/reset.css
 
 * {
-  scrollbar-color: #474747 #e0e0e0;
+  scrollbar-color: #474747 #0b0b0b;
   scrollbar-width: thin;
 
   &::-webkit-scrollbar {
     width: 8px;
-    background-color: #e0e0e0;
+    background-color: #0b0b0b;
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 50px;
     background-color: #474747;
   }
   &::-webkit-scrollbar-track {
-    background-color: #e0e0e0;
+    background-color: #0b0b0b;
     border-radius: 50px;
   }
 }
