@@ -11,6 +11,55 @@
   </head>
   <body>
     <div id="root">
+      <!-- 검색창 -->
+      <div class="search-box-root">
+        <div class="search-box">
+          <div class="inner">
+            <button class="close-btn"></button>
+            <h2>통합검색</h2>
+            <div class="search-input">
+              <img src="./assets/search.png" alt="검색버튼" />
+              <input type="search" placeholder="검색어를 입력해주세요." />
+              <button class="btn"><p>검색</p></button>
+            </div>
+          </div>
+        </div>
+        <button class="bg close-btn"></button>
+      </div>
+      <!-- 모바일 메뉴 -->
+      <div class="mobile-menu-root">
+        <div class="mobile-menu-box">
+          <button class="menu-close-btn"></button>
+          <h2>메뉴</h2>
+          <ul>
+            <li class="nav btn">
+              <a href="#none"><p>기사</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>데일리뉴스</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>영화</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>랭킹</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>멀티미디어</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>이벤트&커뮤니티</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>정기구독</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>아카이브</p></a>
+            </li>
+          </ul>
+        </div>
+        <button class="bg menu-close-btn"></button>
+      </div>
       <!-- 헤더 -->
       <header id="header">
         <div class="top">
@@ -31,28 +80,28 @@
             </h1>
             <nav>
               <ul>
-                <li class="actived btn">
+                <li class="nav btn">
                   <a href="#none"><p>기사</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>데일리뉴스</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>영화</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>랭킹</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>멀티미디어</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>이벤트&커뮤니티</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>정기구독</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>아카이브</p></a>
                 </li>
               </ul>
@@ -79,7 +128,8 @@
       </header>
       <div id="main">
         <a href="#none"
-          ><p>그들의 동행을 기억하라 : <리멤버> 이성민, 남주혁</p></a
+          ><span class="background"></span>
+          <div><p>그들의 동행을 기억하라 : <리멤버> 이성민, 남주혁</p></div></a
         >
       </div>
       <!-- 본문 -->
@@ -87,7 +137,7 @@
         <article class="cont1">
           <div class="inner">
             <header>
-              <h1>씨네21 잡지</h1>
+              <h2>씨네21 잡지</h2>
               <div>
                 <ul>
                   <li>
@@ -126,7 +176,13 @@
         </article>
         <article class="cont2">
           <div class="inner">
-            <header><h1>씨네21 비디오</h1></header>
+            <header>
+              <h2>씨네21 비디오</h2>
+              <div class="btn-wrap">
+                <button class="prev btn"></button>
+                <button class="next btn"></button>
+              </div>
+            </header>
             <section class="video">
               <div class="youtube"><img src="./assets/thumnail.png" /></div>
               <div>
@@ -170,7 +226,7 @@
         </article>
         <article class="cont3">
           <div class="inner">
-            <header><h1>씨네21 최신기사</h1></header>
+            <header><h2>씨네21 최신기사</h2></header>
             <section class="news">
               <ul>
                 <li>
@@ -229,7 +285,7 @@
         </article>
         <article class="cont4">
           <div class="inner">
-            <header><h1>씨네21 20자평</h1></header>
+            <header><h2>씨네21 20자평</h2></header>
             <section class="words">
               <div class="movie-info">
                 <img src="./assets/poster1.jpg" />
@@ -355,5 +411,11 @@
         </div>
       </footer>
     </div>
+
+    <!-- jQuery 스크립트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JavaScript 스크립트 -->
+    <script src="index.js"></script>
   </body>
 </html>

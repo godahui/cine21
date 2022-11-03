@@ -14,7 +14,7 @@
   position: relative;
   overflow: hidden;
 }
-#root .btn > p {
+#root .btn p {
   position: relative;
   z-index: 2;
 }
@@ -38,6 +38,258 @@
 #root .btn:active::after {
   width: 150%;
   height: 300%;
+}
+#root .btn-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 0 0 auto;
+  align-items: flex-end;
+  margin-left: auto;
+}
+#root .btn-wrap > button {
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+#root .btn-wrap > button::before {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #999;
+  border-left: 2px solid #999;
+  position: absolute;
+  z-index: 2;
+  transform: rotate(-45deg);
+  top: 17px;
+  left: 17px;
+}
+#root .btn-wrap > button.next::before {
+  transform: rotate(135deg);
+  left: 14px;
+}
+
+.search-box-root {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  display: none;
+}
+.search-box-root.on {
+  display: block;
+}
+.search-box-root .search-box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 0;
+  width: 100%;
+  height: 200px;
+  background-color: #141414;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.search-box-root .search-box .inner {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 800px;
+  position: relative;
+}
+.search-box-root .search-box .inner .close-btn {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  z-index: 100;
+  width: 28px;
+  height: 28px;
+}
+.search-box-root .search-box .inner .close-btn::after, .search-box-root .search-box .inner .close-btn::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 1px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #b3b3b3;
+  transform: rotate(45deg) translateX(-50%);
+}
+.search-box-root .search-box .inner .close-btn::before {
+  transform: rotate(-45deg) translateX(-50%);
+}
+.search-box-root .search-box .inner .close-btn:hover::after, .search-box-root .search-box .inner .close-btn:hover::before {
+  background-color: #ececec;
+}
+.search-box-root .search-box .inner .close-btn:active::after, .search-box-root .search-box .inner .close-btn:active::before {
+  background-color: rgb(255, 255, 255);
+}
+.search-box-root .search-box .inner > h2 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.search-box-root .search-box .inner > .search-input {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.search-box-root .search-box .inner > .search-input img {
+  margin-right: 10px;
+}
+.search-box-root .search-box .inner > .search-input input {
+  flex: 1 1 auto;
+  border: 0;
+  height: 34px;
+  background-color: #333;
+  padding: 0 15px;
+}
+.search-box-root .search-box .inner > .search-input button {
+  margin-left: 10px;
+  height: 34px;
+  border: 1px solid #333;
+  padding: 0 15px;
+}
+.search-box-root .bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+}
+@media screen and (max-width: 1240px) {
+  .search-box-root .search-box .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .search-box-root .search-box .inner .close-btn {
+    right: 20px;
+  }
+}
+
+.mobile-menu-root {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  display: none;
+}
+.mobile-menu-root.on {
+  display: block;
+}
+.mobile-menu-root .mobile-menu-box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 320px;
+  height: 100%;
+  padding: 20px;
+  background-color: #141414;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
+.mobile-menu-root .mobile-menu-box .menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  width: 28px;
+  height: 28px;
+}
+.mobile-menu-root .mobile-menu-box .menu-close-btn::after, .mobile-menu-root .mobile-menu-box .menu-close-btn::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 1px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #b3b3b3;
+  transform: rotate(45deg) translateX(-50%);
+}
+.mobile-menu-root .mobile-menu-box .menu-close-btn::before {
+  transform: rotate(-45deg) translateX(-50%);
+}
+.mobile-menu-root .mobile-menu-box .menu-close-btn:hover::after, .mobile-menu-root .mobile-menu-box .menu-close-btn:hover::before {
+  background-color: #ececec;
+}
+.mobile-menu-root .mobile-menu-box .menu-close-btn:active::after, .mobile-menu-root .mobile-menu-box .menu-close-btn:active::before {
+  background-color: rgb(255, 255, 255);
+}
+.mobile-menu-root .mobile-menu-box > h2 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+.mobile-menu-root .mobile-menu-box > ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  width: 100%;
+}
+.mobile-menu-root .mobile-menu-box > ul > li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 0 0 30px;
+  margin-bottom: 10px;
+}
+.mobile-menu-root .mobile-menu-box > ul > li.actived > a > p {
+  color: #ff3636;
+}
+.mobile-menu-root .mobile-menu-box > ul > li > a {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+}
+.mobile-menu-root .bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+}
+@media screen and (min-width: 1240px) {
+  .mobile-menu-root {
+    display: none;
+  }
 }
 
 #header {
@@ -152,6 +404,7 @@
   height: 40px;
   transition: background-color 0.2s;
   overflow: hidden;
+  border: 1px solid transparent;
   position: relative;
 }
 #header .bottom .inner > nav > ul > li:not(:nth-child(1)) {
@@ -201,6 +454,13 @@
   flex-flow: row nowrap;
   flex: 0 0 auto;
 }
+#header .mobile-header .inner h1 a {
+  height: 34px;
+}
+#header .mobile-header .inner h1 a img {
+  width: 100%;
+  height: 100%;
+}
 #header .mobile-header .inner .right-menu {
   display: flex;
   flex-flow: row nowrap;
@@ -209,8 +469,9 @@
   justify-content: flex-end;
 }
 #header .mobile-header .inner .right-menu > button {
-  height: 50px;
-  padding: 10px;
+  width: 34px;
+  height: 34px;
+  padding: 5px;
   position: relative;
   overflow: hidden;
 }
@@ -221,10 +482,15 @@
 #header .mobile-header .inner .right-menu > button:not(:nth-of-type(1)) {
   margin-left: 10px;
 }
+#header .mobile-header .inner .right-menu .search-btn img {
+  margin-top: 2px;
+}
 #header .mobile-header .inner .right-menu .menu-btn {
-  padding-right: 12px;
-  padding-left: 12px;
-  padding-bottom: 15px;
+  margin-left: 10px;
+}
+#header .mobile-header .inner .right-menu .menu-btn img {
+  width: 18px;
+  margin-bottom: 2px;
 }
 @media screen and (min-width: 1240px) {
   #header .mobile-header {
@@ -250,30 +516,42 @@
   display: block;
   width: 100%;
   height: 100%;
+  position: relative;
+}
+#main a .background {
+  display: block;
+  width: 100%;
+  height: 100%;
   background-position: 50% 30%;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../assets/main1.png");
-  position: relative;
 }
-#main a p {
+#main a > div {
   width: 100%;
   max-width: 1200px;
-  text-align: left;
-  font-weight: 700;
-  font-size: 40px;
-  word-break: keep-all;
   position: absolute;
   bottom: 60px;
   left: 50%;
   transform: translate(-50%, 0);
 }
+#main a > div p {
+  width: 700px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 40px;
+  word-break: keep-all;
+}
 @media screen and (max-width: 1240px) {
   #main {
     flex: 0 0 480px;
   }
-  #main > a > p {
-    max-width: none;
+  #main > a > div {
+    width: 100%;
+    padding: 0 20px;
+  }
+  #main > a > div > p {
+    max-width: 100%;
     margin: 0 20px;
     font-size: 30px;
   }
@@ -282,7 +560,7 @@
   #main {
     flex: 0 0 420px;
   }
-  #main > a > p {
+  #main > a > div > p {
     font-size: 24px;
   }
 }
@@ -290,7 +568,7 @@
   #main {
     flex: 0 0 400px;
   }
-  #main > a > p {
+  #main > a > div > p {
     font-size: 20px;
   }
 }
@@ -328,7 +606,7 @@
   width: 100%;
   margin-bottom: 20px;
 }
-#container .cont1 header > h1 {
+#container .cont1 header > h2 {
   font-weight: 700;
   font-size: 36px;
   margin-bottom: 40px;
@@ -371,35 +649,6 @@
 }
 #container .cont1 header > div > ul > li > button.subscribe-btn:active::after {
   background-color: #d74242;
-}
-#container .cont1 header > div .btn-wrap {
-  display: flex;
-  flex-flow: row nowrap;
-  flex: 0 0 auto;
-  align-items: flex-end;
-  margin-left: auto;
-}
-#container .cont1 header > div .btn-wrap > button {
-  width: 44px;
-  height: 44px;
-  position: relative;
-}
-#container .cont1 header > div .btn-wrap > button::before {
-  display: block;
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #999;
-  border-left: 2px solid #999;
-  position: absolute;
-  z-index: 2;
-  transform: rotate(-45deg);
-  top: 17px;
-  left: 17px;
-}
-#container .cont1 header > div .btn-wrap > button.next::before {
-  transform: rotate(135deg);
-  left: 14px;
 }
 #container .cont1 .magazine {
   display: flex;
@@ -445,16 +694,15 @@
 }
 #container .cont2 header {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   flex: 0 0 auto;
   align-items: flex-start;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
-#container .cont2 header > h1 {
+#container .cont2 header > h2 {
   font-weight: 700;
   font-size: 36px;
-  margin-bottom: 40px;
 }
 #container .cont2 .video {
   display: flex;
@@ -533,7 +781,7 @@
   align-items: flex-start;
   margin: 100px 0;
 }
-#container .cont3 h1,
+#container .cont3 h2,
 #container .cont3 p,
 #container .cont3 span {
   color: #333;
@@ -546,7 +794,7 @@
   width: 100%;
   margin-bottom: 20px;
 }
-#container .cont3 header > h1 {
+#container .cont3 header > h2 {
   font-weight: 700;
   font-size: 36px;
   margin-bottom: 40px;
@@ -680,7 +928,7 @@
   width: 100%;
   margin-bottom: 20px;
 }
-#container .cont4 > .inner header > h1 {
+#container .cont4 > .inner header > h2 {
   font-weight: 700;
   font-size: 36px;
   margin-bottom: 40px;
@@ -791,7 +1039,7 @@
   #container .cont1 {
     margin: 50px 0;
   }
-  #container .cont1 header h1 {
+  #container .cont1 header h2 {
     font-size: 24px;
     margin-bottom: 30px;
   }
@@ -799,9 +1047,9 @@
     font-size: 14px;
   }
   #container .cont2 header {
-    margin: 0;
+    margin-bottom: 30px;
   }
-  #container .cont2 header h1 {
+  #container .cont2 header h2 {
     font-size: 24px;
   }
   #container .cont2 .video {
@@ -829,7 +1077,7 @@
   #container .cont3 header {
     margin: 0;
   }
-  #container .cont3 header h1 {
+  #container .cont3 header h2 {
     font-size: 24px;
   }
   #container .cont4 > .inner {
@@ -838,7 +1086,7 @@
   #container .cont4 > .inner header {
     margin: 0;
   }
-  #container .cont4 > .inner header h1 {
+  #container .cont4 > .inner header h2 {
     font-size: 24px;
   }
   #container .cont4 > .inner .words {
@@ -879,7 +1127,7 @@
   #container .cont3 > .inner {
     margin: 50px 0;
   }
-  #container .cont3 > .inner header h1 {
+  #container .cont3 > .inner header h2 {
     flex: 0 0 50px;
   }
   #container .cont3 > .inner .news > ul {
@@ -928,7 +1176,7 @@
   #container .cont3 > .inner {
     margin: 40px 0;
   }
-  #container .cont3 > .inner header h1 {
+  #container .cont3 > .inner header h2 {
     flex: 0 0 50px;
   }
   #container .cont3 > .inner .news > ul > li .text span {
@@ -940,6 +1188,19 @@
   }
   #container .cont4 > .inner .words .movie-info img {
     height: 150px;
+  }
+  #container .cont4 > .inner .words > ul > li .name span {
+    font-size: 14px;
+  }
+  #container .cont4 > .inner .words > ul > li .name > ul > li {
+    flex: 0 0 14px;
+    height: 14px;
+  }
+  #container .cont4 > .inner .words > ul > li .name > ul > li img {
+    padding-bottom: 10px;
+  }
+  #container .cont4 > .inner .words > ul > li > p {
+    font-size: 12px;
   }
 }
 
