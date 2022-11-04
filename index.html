@@ -11,6 +11,55 @@
   </head>
   <body>
     <div id="root">
+      <!-- 검색창 -->
+      <div class="search-box-root">
+        <div class="search-box">
+          <div class="inner">
+            <button class="close-btn"></button>
+            <h2>통합검색</h2>
+            <div class="search-input">
+              <img src="./assets/search.png" alt="검색버튼" />
+              <input type="search" placeholder="검색어를 입력해주세요." />
+              <button class="btn"><p>검색</p></button>
+            </div>
+          </div>
+        </div>
+        <button class="bg close-btn"></button>
+      </div>
+      <!-- 모바일 메뉴 -->
+      <div class="mobile-menu-root">
+        <div class="mobile-menu-box">
+          <button class="menu-close-btn"></button>
+          <h2>메뉴</h2>
+          <ul>
+            <li class="nav btn">
+              <a href="#none"><p>기사</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>데일리뉴스</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>영화</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>랭킹</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>멀티미디어</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>이벤트&커뮤니티</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>정기구독</p></a>
+            </li>
+            <li class="nav btn">
+              <a href="#none"><p>아카이브</p></a>
+            </li>
+          </ul>
+        </div>
+        <button class="bg menu-close-btn"></button>
+      </div>
       <!-- 헤더 -->
       <header id="header">
         <div class="top">
@@ -31,28 +80,28 @@
             </h1>
             <nav>
               <ul>
-                <li class="actived btn">
+                <li class="nav btn">
                   <a href="#none"><p>기사</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>데일리뉴스</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>영화</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>랭킹</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>멀티미디어</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>이벤트&커뮤니티</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>정기구독</p></a>
                 </li>
-                <li class="btn">
+                <li class="nav btn">
                   <a href="#none"><p>아카이브</p></a>
                 </li>
               </ul>
@@ -78,16 +127,48 @@
         </div>
       </header>
       <div id="main">
-        <a href="#none"
-          ><p>그들의 동행을 기억하라 : <리멤버> 이성민, 남주혁</p></a
-        >
+        <div>
+          <div class="play-btn-wrap">
+            <span class="play-btn"
+              ><img src="./assets/play.png" alt="재생"
+            /></span>
+            <span class="pause-btn"
+              ><img src="./assets/pause.png" alt="일시정지"
+            /></span>
+          </div>
+          <ul class="main-slide-nav">
+            <li class="step"><span></span></li>
+            <li class="step"><span></span></li>
+            <li class="step"><span></span></li>
+          </ul>
+        </div>
+        <a href="#none">
+          <div class="item main1">
+            <div class="inner">
+              <p>그들의 동행을 기억하라 : <리멤버> 이성민, 남주혁</p>
+            </div>
+          </div>
+          <div class="item main2">
+            <div class="inner">
+              <p>
+                살 것인가 죽을 것인가 팔릴 것인가 : 티빙 <몸값> 진선규, 전종서,
+                장률
+              </p>
+            </div>
+          </div>
+          <div class="item main3">
+            <div class="inner">
+              <p>3번째 슬라이드</p>
+            </div>
+          </div>
+        </a>
       </div>
       <!-- 본문 -->
       <div id="container">
         <article class="cont1">
           <div class="inner">
             <header>
-              <h1>씨네21 잡지</h1>
+              <h2>씨네21 잡지</h2>
               <div>
                 <ul>
                   <li>
@@ -100,10 +181,6 @@
                     <button class="btn"><p>무료 구독 이벤트</p></button>
                   </li>
                 </ul>
-                <div class="btn-wrap">
-                  <button class="prev btn"></button>
-                  <button class="next btn"></button>
-                </div>
               </div>
             </header>
             <section class="magazine">
@@ -126,9 +203,15 @@
         </article>
         <article class="cont2">
           <div class="inner">
-            <header><h1>씨네21 비디오</h1></header>
+            <header>
+              <h2>씨네21 비디오</h2>
+            </header>
             <section class="video">
-              <div class="youtube"><img src="./assets/thumnail.png" /></div>
+              <a
+                class="youtube"
+                target="_blank"
+                href="https://www.youtube.com/watch?v=lNHtqRlRjJc"
+              ></a>
               <div>
                 <div class="text-box">
                   <strong>
@@ -136,91 +219,186 @@
                     감독님이 왜 여기 계세요?</strong
                   >
                   <p>
-                    제1항의 해임건의는 국회재적의원 3분의 1 이상의 발의에 의하여
-                    국회재적의원 과반수의 찬성이 있어야 한다. 위원은 정당에
-                    가입하거나 정치에 관여할 수 없다. 국가는 농·어민과
-                    중소기업의 자조조직을 육성하여야 하며, 그 자율적 활동과
-                    발전을 보장한다. 언론·출판에 대한 허가나 검열과 집회·결사에
-                    대한 허가는 인정되지 아니한다. 국회는 국민의
-                    보통·평등·직접·비밀선거에 의하여 선출된 국회의원으로
-                    구성한다. 국회의원은 국가이익을 우선하여 양심에 따라 직무를
-                    행한다. 대통령은 국무총리·국무위원·행정각부의 장 기타 법률이
-                    정하는 공사의 직을 겸할 수 없다. 모든 국민은 신속한 재판을
-                    받을 권리를 가진다. 형사피고인은 상당한 이유가 없는 한
-                    지체없이 공개재판을 받을 권리를 가진다. 예비비는 총액으로
-                    국회의 의결을 얻어야 한다. 예비비의 지출은 차기국회의 승인을
-                    얻어야 한다. 대통령은 제1항과 제2항의 처분 또는 명령을 한
-                    때에는 지체없이 국회에 보고하여 그 승인을 얻어야 한다.
-                    국회의원은 법률이 정하는 직을 겸할 수 없다. 국회나 그
-                    위원회의 요구가 있을 때에는 국무총리·국무위원 또는
-                    정부위원은 출석·답변하여야 하며, 국무총리 또는 국무위원이
-                    출석요구를 받은 때에는 국무위원 또는 정부위원으로 하여금
-                    출석·답변하게 할 수 있다. 대통령후보자가 1인일 때에는 그
-                    득표수가 선거권자 총수의 3분의 1 이상이 아니면 대통령으로
-                    당선될 수 없다. 비상계엄하의 군사재판은 군인·군무원의 범죄나
-                    군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에
-                    관한 죄중 법률이 정한 경우에 한하여 단심으로 할 수 있다.
-                    다만, 사형을 선고한 경우에는 그러하지 아니하다.
+                    조회수 915회 2022. 10. 31. 씨네21이 LA 헐리우드에
+                    다녀왔습니다! 아카데미 영화 박물관부터 1주년 기념 레드카펫
+                    행사까지, 헐리우드 배우들과 자랑스러운 한국 영화인들을 함께
+                    만나보세요
+                  </p>
+                  <p>
+                    #아카데미영화박물관 #AcademyMuseumOfMotionPictures #박찬욱
+                    #이병헌
                   </p>
                 </div>
-                <a class="btn" href="#none"><p>씨네21 유튜브 바로가기</p></a>
+                <a
+                  class="btn"
+                  target="_blank"
+                  href="https://www.youtube.com/c/cine21tv"
+                  ><p>씨네21 유튜브 바로가기</p></a
+                >
               </div>
             </section>
           </div>
         </article>
         <article class="cont3">
           <div class="inner">
-            <header><h1>씨네21 최신기사</h1></header>
+            <header><h2>씨네21 최신기사</h2></header>
             <section class="news">
-              <ul>
-                <li>
-                  <a href="#none">
-                    <img src="./assets/news/news (1).png" />
-                    <div class="text">
-                      <span>씨네21 추천도서 - <녹스>, <메모리얼 드라이브></span>
-                      <p>2022-10-31</p>
-                    </div></a
-                  >
-                </li>
-                <li>
-                  <a href="#none">
-                    <img src="./assets/news/news (2).png" />
-                    <div class="text">
-                      <span
-                        >[LIST] 배우 박정우가 말하는 요즘 빠져 있는 것들의
-                        목록</span
+              <ul class="news-list">
+                <li class="news-list-item item1">
+                  <ul>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (1).png" />
+                        <div class="text">
+                          <span
+                            >씨네21 추천도서 - <녹스>, <메모리얼 드라이브></span
+                          >
+                          <p>2022-10-31</p>
+                        </div></a
                       >
-                      <p>2022-10-31</p>
-                    </div></a
-                  >
-                </li>
-                <li>
-                  <a href="#none">
-                    <img src="./assets/news/news (3).png" />
-                    <div class="text">
-                      <span>[뉴욕] 주목할 결심</span>
-                      <p>2022-10-31</p>
-                    </div></a
-                  >
-                </li>
-                <li>
-                  <a href="#none">
-                    <img src="./assets/news/news (4).png" />
-                    <div class="text">
-                      <span
-                        >[OTT 추천작] ‘체인소 맨’ ‘웰컴 투 더 클럽’ ‘기예르모 델
-                        토로의 호기심 방’ ‘웨어울프 바이 나이트’</span
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (2).png" />
+                        <div class="text">
+                          <span
+                            >[LIST] 배우 박정우가 말하는 요즘 빠져 있는 것들의
+                            목록</span
+                          >
+                          <p>2022-10-31</p>
+                        </div></a
                       >
-                      <p>2022-10-31</p>
-                    </div></a
-                  >
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (3).png" />
+                        <div class="text">
+                          <span>[뉴욕] 주목할 결심</span>
+                          <p>2022-10-31</p>
+                        </div></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (4).png" />
+                        <div class="text">
+                          <span
+                            >[OTT 추천작] ‘체인소 맨’ ‘웰컴 투 더 클럽’
+                            ‘기예르모 델 토로의 호기심 방’ ‘웨어울프 바이
+                            나이트’</span
+                          >
+                          <p>2022-10-31</p>
+                        </div></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="news-list-item item2">
+                  <ul>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (5).png" />
+                        <div class="text">
+                          <span
+                            >씨네21 추천도서 - <녹스>, <메모리얼 드라이브></span
+                          >
+                          <p>2022-10-31</p>
+                        </div></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (6).png" />
+                        <div class="text">
+                          <span
+                            >씨네21, 언론진흥재단의 인권증진보도 프로젝트 ‘어느
+                            신인 작가의 고백’ 공개</span
+                          >
+                          <p>2022-10-31</p>
+                        </div></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (7).png" />
+                        <div class="text">
+                          <span>[뉴욕] 주목할 결심</span>
+                          <p>2022-10-31</p>
+                        </div></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (8).png" />
+                        <div class="text">
+                          <span
+                            >[OTT 추천작] ‘체인소 맨’ ‘웰컴 투 더 클럽’
+                            ‘기예르모 델 토로의 호기심 방’ ‘웨어울프 바이
+                            나이트’</span
+                          >
+                          <p>2022-10-31</p>
+                        </div></a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="news-list-item item3">
+                  <ul>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (9).png" />
+                        <div class="text">
+                          <span
+                            >씨네21 추천도서 - <녹스>, <메모리얼 드라이브></span
+                          >
+                          <p>2022-10-31</p>
+                        </div></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (10).png" />
+                        <div class="text">
+                          <span
+                            >[LIST] 배우 박정우가 말하는 요즘 빠져 있는 것들의
+                            목록</span
+                          >
+                          <p>2022-10-31</p>
+                        </div></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (11).png" />
+                        <div class="text">
+                          <span>[뉴욕] 주목할 결심</span>
+                          <p>2022-10-31</p>
+                        </div></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#none">
+                        <img src="./assets/news/news (12).png" />
+                        <div class="text">
+                          <span
+                            >[OTT 추천작] ‘체인소 맨’ ‘웰컴 투 더 클럽’
+                            ‘기예르모 델 토로의 호기심 방’ ‘웨어울프 바이
+                            나이트’</span
+                          >
+                          <p>2022-10-31</p>
+                        </div></a
+                      >
+                    </li>
+                  </ul>
                 </li>
               </ul>
               <div class="bottom-area">
-                <ul>
-                  <li class="actived"><span></span></li>
-                  <li><span></span></li>
-                  <li><span></span></li>
+                <ul class="news-nav">
+                  <li class="news-nav-item actived" data-index="1">
+                    <span></span>
+                  </li>
+                  <li class="news-nav-item" data-index="1"><span></span></li>
+                  <li class="news-nav-item" data-index="2"><span></span></li>
                 </ul>
                 <a href="#none"><p>더보기</p></a>
               </div>
@@ -229,7 +407,7 @@
         </article>
         <article class="cont4">
           <div class="inner">
-            <header><h1>씨네21 20자평</h1></header>
+            <header><h2>씨네21 20자평</h2></header>
             <section class="words">
               <div class="movie-info">
                 <img src="./assets/poster1.jpg" />
@@ -355,29 +533,11 @@
         </div>
       </footer>
     </div>
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
 
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyA0TKKcgJdn057_vAC8OI-zaXCsW718nJ8",
-        authDomain: "portfolio-pjt-4e550.firebaseapp.com",
-        databaseURL: "https://portfolio-pjt-4e550-default-rtdb.firebaseio.com",
-        projectId: "portfolio-pjt-4e550",
-        storageBucket: "portfolio-pjt-4e550.appspot.com",
-        messagingSenderId: "91907095744",
-        appId: "1:91907095744:web:0ff714f80481cb69f14125",
-        measurementId: "G-16P4FV0S3D",
-      };
+    <!-- jQuery 스크립트 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
+    <!-- JavaScript 스크립트 -->
+    <script src="index.js"></script>
   </body>
 </html>
