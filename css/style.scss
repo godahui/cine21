@@ -709,7 +709,7 @@
         background-image: url("../assets/main2.jpg");
       }
       &.main3 {
-        background-image: url("../assets/main3.png");
+        background-image: url("../assets/main3.jpg");
       }
       .inner {
         flex: 0 0 1200px;
@@ -1039,10 +1039,9 @@
         > .news-list-item {
           display: flex;
           flex-flow: row nowrap;
-          flex: 0 0 auto;
+          flex: 1 1 auto;
 
           width: calc(100% / 3);
-          margin-right: 20px;
           > ul {
             display: flex;
             flex-flow: row nowrap;
@@ -1423,7 +1422,7 @@
 
                 width: 100%;
                 > li {
-                  flex: 0 0 calc(50% - 40px);
+                  flex: 0 0 calc(50% - 20px);
                   margin-right: 0;
                   &:nth-child(odd) {
                     margin-right: 20px;
