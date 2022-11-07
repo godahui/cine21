@@ -600,7 +600,7 @@
   background-image: url("../assets/main2.jpg");
 }
 #main a .item.main3 {
-  background-image: url("../assets/main3.png");
+  background-image: url("../assets/main3.jpg");
 }
 #main a .item .inner {
   flex: 0 0 1200px;
@@ -896,9 +896,8 @@
 #container .cont3 .news > .news-list > .news-list-item {
   display: flex;
   flex-flow: row nowrap;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   width: 33.3333333333%;
-  margin-right: 20px;
 }
 #container .cont3 .news > .news-list > .news-list-item > ul {
   display: flex;
@@ -1232,7 +1231,7 @@
     width: 100%;
   }
   #container .cont3 > .inner .news > .news-list > .news-list-item > ul > li {
-    flex: 0 0 calc(50% - 40px);
+    flex: 0 0 calc(50% - 20px);
     margin-right: 0;
   }
   #container .cont3 > .inner .news > .news-list > .news-list-item > ul > li:nth-child(odd) {
