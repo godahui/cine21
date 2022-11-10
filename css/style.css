@@ -947,6 +947,12 @@
   color: #666;
   font-size: 14px;
 }
+#container .cont3 .news > .news-list > .news-list-item > ul > li:hover > a img {
+  filter: brightness(0.8);
+}
+#container .cont3 .news > .news-list > .news-list-item > ul > li:active > a img {
+  filter: brightness(0.7);
+}
 #container .cont3 .news .bottom-area {
   display: flex;
   flex-flow: row nowrap;

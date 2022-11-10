@@ -1091,6 +1091,16 @@
                   }
                 }
               }
+              &:hover {
+                > a img {
+                  filter: brightness(0.8);
+                }
+              }
+              &:active {
+                > a img {
+                  filter: brightness(0.7);
+                }
+              }
             }
           }
         }
