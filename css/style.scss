@@ -1053,7 +1053,6 @@
             > li {
               display: flex;
               flex-flow: column nowrap;
-              align-items: space-between;
               flex: 0 0 calc(25% - 60px);
               margin-right: 20px;
               &:last-child {
